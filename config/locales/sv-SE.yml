@@ -1,0 +1,152 @@
+
+
+	
+
+"sv-SE":
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%e. %b"
+      long: "%e. %B %Y"
+      only_day: "%e"
+
+    day_names: [Söndag, Måndag, Tisdag, Onsdag, Torsdag, Fredag, Lördag]
+    abbr_day_names: [Sön, Mån, Tis, Ons, Tor, Fre, Lör]
+    month_names: [~, Januari, Februari, Mars, April, Maj, Juni, Juli, Augusti, September, Oktober, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, Maj, Jun, Jul, Aug, Sep, Okt, Nov, Dec]
+    order: [ :day, :month, :year ]
+  
+  time:
+    formats:
+      default: "%A, %e. %B %Y, %H:%M Uhr"
+      time: "%H:%M"
+      short: "%e. %B, %H:%M Uhr"
+      long: "%A, %e. %B %Y, %H:%M Uhr"
+      only_second: "%S"
+
+    am: ""
+    pm: ""
+      
+  datetime:
+    distance_in_words:
+      half_a_minute: "en halv minut"
+      less_than_x_seconds:
+        one:   "mindre än 1 sekund"
+        other: "mindre än {{count}} sekunder"
+      x_seconds:
+        one:   "1 sekund"
+        other: "{{count}} sekunder"
+      less_than_x_minutes:
+        one:   "mindre än en minut"
+        other: "mindre än {{count}} minuter"
+      x_minutes:
+        one:   "1 minut"
+        other: "{{count}} minuter"
+      about_x_hours:
+        one:   "ungefär 1 timme"
+        other: "ungefär {{count}} timmar"
+      x_days:
+        one:   "1 dag"
+        other: "{{count}} dagar"
+      about_x_months:
+        one:   "ungefär 1 månad"
+        other: "ungefär {{count}} månader"
+      x_months:
+        one:   "1 månad"
+        other: "{{count}} månader"
+      about_x_years:
+        one:   "ungefär 1 år"
+        other: "ungefär {{count}} år"
+      over_x_years:
+        one:   "över 1 år"
+        other: "över {{count}} år"
+      
+  number:
+    format:
+      precision: 2
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'SEK'
+        format: '%n %u'
+        
+  activerecord:
+    errors:
+      # The values :model, :attribute and :value are always available for interpolation
+      # The value :count is available when applicable. Can be used for pluralization.
+      messages:
+        inclusion: "har ett ogiltigt värde"
+        exclusion: "är reserverad"
+        invalid: "har ett ogiltigt värde"
+        confirmation: "överensstämmer inte med bekräftelsen"
+        accepted: "måste accepteras"
+        empty: "kan inte vara tom"
+        blank: "kan inte vara tom"
+        too_long: "är för lång (får inte ha mer än {{count}} tecken)"
+        too_short: "är för kort (får inte ha mindre än {{count}} tecken)"
+        wrong_length: "har fel längd (måste ha precis {{count}} tecken)"
+        taken: "är upptagen"
+        not_a_number: "är inte ett tal"
+        greater_than: "måste vara större än {{count}}"
+        greater_than_or_equal_to: "måste vara större än eller lika med {{count}}"
+        equal_to: "måste vara lika med {{count}}"
+        less_than: "måste vara mindre än {{count}}"
+        less_than_or_equal_to: "måste vara mindre än eller lika med {{count}}"
+        odd: "måste vara ojämn"
+        even: "måste vara jämn"
+      template:
+        header:
+          one:    "Ett fel hindrade formuläret från att sparas"
+          other:  "{{count}} fel hindrade formuläret från att sparas."
+        # The variable :count is also available
+        body: "Följande fält behöver rättas:"
+    models:
+    # Overrides default messages
+
+    attributes:
+    # Overrides model and default messages.
+  txt:
+    main_title: "Localizing Rails"
+    app_name: "Demo Application"
+    sub_title: "how to localize your app with Rails' new i18n features"
+    contents: "Contents"
+    menu:
+      introduction: "Introduction"
+      about: "About"
+      setup: "Setup"
+      date_formats: "Date formats"
+      time_formats: "Time formats"
+    about:
+      title: "About this demo app"
+      author: "This demo app was written by {{mail_1}}."
+      feedback: "If you have any feedback, please feel free to drop me a line. Also visit {{blog_href}} where I regularly blog about Rails and other stuff."
+      licence: "This demo app and all its contents are licensed under the {{licence_href}}. If you want to use it in ways prohibited by this license, please contact me and ask my permission."
+    active_record:
+      too_lazy: "No examples here since I'm too lazy to think of attributes to show <strong>all</strong> custom error messages. ;-)"
+      easy_to_understand: "It's quite easy to understand, though."
+    date_formats:
+      rails_standards_work: "Rails standard formats (Date::DATE_FORMATS) still work:"
+    date_helper:
+      date_time_title: "Date/Time distance"
+      forms_title: "Forms"
+    index:
+      others: "others"
+      introduction: "Lately, a lot of work has been done by {{sven_blog}} and {{sven_github}} to facilitate future internationalization and localization of Rails."
+      story_so_far: "This demo app tries to show you how you can use the features that have been implemented so far to localize big parts of your Rails application."
+    number_helper:
+      note_one: "Note: <code>number_to_phone</code> hasn't been localized yet and probably never will be - at least not in core. Look out for new internationalization/localization plugins like a new version of {{globalize}} as they will probably support stuff like that."
+      note_two: "Another note: <code>number_to_currency</code>, <code>number_to_percentage</code> and <code>number_to_human_size</code> all use <code>number_with_precision</code> internally and <code>number_with_precision</code> uses <code>number_with_delimiter</code> internally."
+    setup:
+      freezing_edge_and_adding: "Freezing Edge and installing the localized_dates plugin"
+      you_need_to_be_on_edge: "You need to be on Edge Rails in order to use the Rails i18n features:"
+      date_time_formats: "For date and time formats, you also need to install the {{localized_dates_link}}:"
+      config_locale: "Configuring the locale"
+      best_place: "The best place to put your locale configuration, in my opinion, is <code>config/locales</code>. The localized_dates plugin will copy two locales, en-US and de-AT, in this directory. You can extend or modify them and also create new locales."
+      locale: "Here's the demo locale that was used for this demo application:"
+      defaults: "You also need to set up the default locale and/or locale in your <code>environment.rb</code> or an initializer."
+      locale_structure_title: "A word on the structure of locales"
+      locale_structure_number: "You may have noticed that inside the <code>:number</code> part of the locale, we defined <code>:format</code> and <code>:currency</code>. In general, locales are structured hierarchically - i.e. a currencies are numbers, percentages are numbers, etc. <code>:currency</code> can either override the basic <code>:format</code> settings (in our case, we set <code>:precision</code> to 2 instead of 3) or extend them (we add two new options, <code>:unit</code> and <code>:format</code>)."
+      locale_structure_date_time: "The same holds true for dates and times: If needed, <code>:datetime</code> and <code>:time_with_zone</code> can be used to specifically address formatting of their respective types instead of just relying on the settings for <code>:time</code>. Note, however, that usually you want to use the same formats as <code>:time</code>."
+    time_formats:
+      rails_standards_work: "Rails standard formats (Time::DATE_FORMATS) still work:"
