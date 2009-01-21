@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
 
+
   def set_locale
     # update session if passed
     session[:locale] = params[:locale] if params[:locale]
